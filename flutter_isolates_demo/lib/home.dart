@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_isolates_demo/with_isolate.dart';
 import 'package:flutter_isolates_demo/without_isolate.dart';
 
+import 'examples.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -42,6 +44,21 @@ class HomeScreen extends StatelessWidget {
                   )
                 },
                 child: const Text("With Isolate"),
+              ),
+              SizedBox(height: 20,),
+              Text("This are real life examples for isoalte"),
+              ElevatedButton(
+                style: ButtonStyle(
+                    foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+                    backgroundColor: WidgetStateProperty.all<Color>(Colors.indigoAccent)
+                ),
+                onPressed: () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const RealLifeExamples()),
+                  )
+                },
+                child: const Text("Real life examples"),
               ),
             ],
           ),
