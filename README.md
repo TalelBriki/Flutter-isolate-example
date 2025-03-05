@@ -20,4 +20,4 @@ Additionally, there is another Flutter project inside this repository that uses 
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/flutter_isolates_demo.git
+   git clone https://github.com/TalelBriki/flutter_isolates_demo.git
