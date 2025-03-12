@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_isolates_demo/with_isolate.dart';
 import 'package:flutter_isolates_demo/without_isolate.dart';
 
+import 'communication_isolates.dart';
 import 'examples.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -46,6 +47,22 @@ class HomeScreen extends StatelessWidget {
                 child: const Text("With Isolate"),
               ),
               SizedBox(height: 20,),
+              Text("This simple and easy-to-understand example of communication between two isolates in Flutter"),
+              ElevatedButton(
+                style: ButtonStyle(
+                    foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+                    backgroundColor: WidgetStateProperty.all<Color>(Colors.indigoAccent)
+                ),
+                onPressed: () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  IsolateCommunicationScreen()),
+                  )
+                },
+                child: const Text("Communnication inter-isolate"),
+              ),
+              SizedBox(height: 20,),
+
               Text("This are real life examples for isoalte"),
               ElevatedButton(
                 style: ButtonStyle(
