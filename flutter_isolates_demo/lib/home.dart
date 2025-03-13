@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_isolates_demo/background_plugin_isolates.dart';
-import 'package:flutter_isolates_demo/with_isolate.dart';
-import 'package:flutter_isolates_demo/without_isolate.dart';
+import 'package:flutter_isolates_demo/isolate_plugin_commuincation/background_plugin_isolates.dart';
+import 'package:flutter_isolates_demo/why_use_isolate/with_isolate.dart';
+import 'package:flutter_isolates_demo/why_use_isolate/without_isolate.dart';
 
 import 'communication_isolates.dart';
-import 'examples.dart';
+import 'exmples/examples.dart';
+import 'isolate_plugin_commuincation/flutter_isolate_plugin.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -65,7 +66,7 @@ class HomeScreen extends StatelessWidget {
 
               SizedBox(height: 20,),
 
-              Text("background isolate channels"),
+              Text("background isolate channels example"),
               ElevatedButton(
                 style: ButtonStyle(
                     foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
@@ -80,7 +81,21 @@ class HomeScreen extends StatelessWidget {
                 child: const Text("Rbackground isolate channels"),
               ),
               SizedBox(height: 20,),
-
+              Text("flutter isolate plugin example"),
+              ElevatedButton(
+                style: ButtonStyle(
+                    foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+                    backgroundColor: WidgetStateProperty.all<Color>(Colors.greenAccent)
+                ),
+                onPressed: () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const FlutterIsolateExample()),
+                  )
+                },
+                child: const Text("flutter isolate plugin"),
+              ),
+              SizedBox(height: 20,),
               Text("This are real life examples for isoalte"),
               ElevatedButton(
                 style: ButtonStyle(

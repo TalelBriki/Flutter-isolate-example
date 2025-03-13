@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'exmples/encryption.dart';
-import 'exmples/file_reading.dart';
-import 'exmples/image_processing.dart';
-import 'exmples/json_parsing.dart';
+import 'encryption.dart';
+import 'file_reading.dart';
+import 'image_processing.dart';
+import 'json_parsing.dart';
 
 
 class RealLifeExamples extends StatelessWidget {
