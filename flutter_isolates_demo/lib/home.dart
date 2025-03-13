@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_isolates_demo/background_plugin_isolates.dart';
 import 'package:flutter_isolates_demo/with_isolate.dart';
 import 'package:flutter_isolates_demo/without_isolate.dart';
 
@@ -60,6 +61,23 @@ class HomeScreen extends StatelessWidget {
                   )
                 },
                 child: const Text("Communnication inter-isolate"),
+              ),
+
+              SizedBox(height: 20,),
+
+              Text("background isolate channels"),
+              ElevatedButton(
+                style: ButtonStyle(
+                    foregroundColor: WidgetStateProperty.all<Color>(Colors.white),
+                    backgroundColor: WidgetStateProperty.all<Color>(Colors.greenAccent)
+                ),
+                onPressed: () => {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const BackgroundPluginIsolates()),
+                  )
+                },
+                child: const Text("Rbackground isolate channels"),
               ),
               SizedBox(height: 20,),
 
