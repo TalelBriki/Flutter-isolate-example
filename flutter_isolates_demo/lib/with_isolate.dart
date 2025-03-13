@@ -2,6 +2,8 @@ import 'dart:isolate';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+import 'package:lottie/lottie.dart';
+
 class WithIsolate extends StatefulWidget {
   const WithIsolate({super.key});
 
@@ -11,7 +13,6 @@ class WithIsolate extends StatefulWidget {
 
 class _WithIsolateState extends State<WithIsolate> {
   String _result = "Tap a button to start";
-  Color _containerColor = Colors.red;
 
   Future<void> _runHeavyTask() async {
     setState(() {
@@ -54,18 +55,8 @@ class _WithIsolateState extends State<WithIsolate> {
               child: const Text("Run Task"),
             ),
             const SizedBox(height: 20),
-            GestureDetector(
-              onTap: () {
-                setState(() {
-                  _containerColor = Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
-                });
-              },
-              child: Container(
-                color: _containerColor,
-                height: 100,
-                width: 100,
-              ),
-            ),
+            Lottie.asset('assets/lotties/loading_lottie.json'),
+
           ],
         ),
       ),
