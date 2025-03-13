@@ -2,6 +2,8 @@ import 'dart:isolate';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_annimation.dart';
+
 class JsonParsingScreen extends StatefulWidget {
   const JsonParsingScreen({super.key});
 
@@ -43,6 +45,9 @@ class _JsonParsingScreenState extends State<JsonParsingScreen> {
           children: [
             Text(_status, style: const TextStyle(fontSize: 18)),
             const SizedBox(height: 20),
+            CustomAnnimation(),
+            const SizedBox(height: 20),
+
             ElevatedButton(
               onPressed: _parseJson,
               child: const Text("Parse JSON"),

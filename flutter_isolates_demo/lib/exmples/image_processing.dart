@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:image/image.dart' as img;
 import 'package:image_picker/image_picker.dart';
 
+import '../widgets/custom_annimation.dart';
+
 class ImageProcessingScreen extends StatefulWidget {
   const ImageProcessingScreen({super.key});
 
@@ -84,7 +86,7 @@ class _ImageProcessingScreenState extends State<ImageProcessingScreen> {
               ),
               const SizedBox(height: 20),
               _isProcessing
-                  ? const CircularProgressIndicator()
+                  ? const CustomAnnimation()
                   : Column(
                 children: [
                   if (_originalImage != null) ...[

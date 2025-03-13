@@ -1,8 +1,7 @@
 import 'dart:isolate';
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
 
-import 'package:lottie/lottie.dart';
+import '../widgets/custom_annimation.dart';
 
 class WithIsolate extends StatefulWidget {
   const WithIsolate({super.key});
@@ -55,7 +54,7 @@ class _WithIsolateState extends State<WithIsolate> {
               child: const Text("Run Task"),
             ),
             const SizedBox(height: 20),
-            Lottie.asset('assets/lotties/loading_lottie.json'),
+            CustomAnnimation(),
 
           ],
         ),

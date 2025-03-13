@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
+import '../widgets/custom_annimation.dart';
+
 class FileReadingScreen extends StatefulWidget {
   const FileReadingScreen({super.key});
 
@@ -89,10 +91,14 @@ class _FileReadingScreenState extends State<FileReadingScreen> {
             children: [
               Text(_status, style: const TextStyle(fontSize: 18)),
               const SizedBox(height: 20),
+
               ElevatedButton(
                 onPressed: _generateAndReadFile,
                 child: const Text("Generate and Read File"),
               ),
+              const SizedBox(height: 20),
+              CustomAnnimation(),
+
             ],
           ),
         ),

@@ -2,7 +2,9 @@ import 'dart:isolate';
 import 'package:encrypt/encrypt.dart' as encrypt;
 import 'package:flutter/material.dart';
 import 'dart:typed_data';
-import 'dart:convert'; // For utf8.encode
+import 'dart:convert';
+
+import '../widgets/custom_annimation.dart'; // For utf8.encode
 
 class EncryptionScreen extends StatefulWidget {
   const EncryptionScreen({super.key});
@@ -107,6 +109,8 @@ class _EncryptionScreenState extends State<EncryptionScreen> {
             Text(_encryptedText, style: const TextStyle(fontSize: 18)),
             const SizedBox(height: 20),
             Text(_decryptedText, style: const TextStyle(fontSize: 18, color: Colors.green)),
+            const SizedBox(height: 20),
+            CustomAnnimation(),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: _encryptData,
