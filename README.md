@@ -4,6 +4,8 @@ This repository provides a demo that explores the usage of **Dart isolates** in 
 
 The project demonstrates how to utilize isolates in Flutter by presenting practical use cases, comparing the default isolate approach with the `flutter_isolates` package, and showing the differences and trade-offs between the two. 
 
+
+
 ## Table of Contents
 
 1. [Overview](#overview)
